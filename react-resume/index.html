@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resume-react</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body>
+    <div id="root" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"></div>
+    <script type="text/babel">
+        var root = document.getElementById("root")
+        let Resumetitle = () => <h2>Resume</h2>
+        let Name = ({ names }) => <h3>{names}</h3>
+        let Address = ({ email,phno,addrs }) => <p><span>{email}</span>  || <span>{phno}</span>  ||  <span>{addrs}</span></p>
+        let Objective = () => <p>Efficient Computer Science Engineering Major completed attending K L N College of Engineering. Aiming to leverage
+        proven communication and leadership skills to successfully fill the suitable role at your company. Frequently praised as
+adaptable to my peers, I can be relied upon to help your company to achieve its goals</p>
+        let hr = () => <hr />
+        let Education1 = ({ sslc }) => <p><h5>SSLC:</h5>{sslc}</p>
+        let Education2 = ({ hsc }) => <p><h5>HSC:</h5>{hsc}</p>
+        let Clge = ({ coll }) => <p><h5>UG:</h5>{coll}</p>
+        let Proj = () => <h2>Projects</h2>
+        let Mini = () => <p><ul><li>Developed a Simple Flash Game with Greenfoot software</li><li>Registration and Login form is done using java servlet by JDBC
+Connectivity and the database used is MySQL,Apache Tomcat server</li></ul></p>
+        let Mainproj = () => <h2>Main Project</h2>
+        let Main = () => <p><ul><li>Credit card Fruad detection using Apache kafka,Apache Cassandra with random forest algorithm</li></ul></p>
+        let Skillset = () => <h2>Skills</h2>
+        let Skills = () => <p><ul><li>JAVA at intermediate level</li><li>C/C++ at intermediate Level</li><li>Python at Basic level</li><li>HTML and Fundamentals of WEB Development</li></ul></p>
+        let Area = ({ intrst }) => <h2>{intrst}</h2>
+        let Interest = () => <p><ul><li>Javascript</li><li>Java Programming</li><li>C/ C++</li><li>HTML/CSS</li></ul></p>
+        let Toools = ({ used }) => <h2>{used}</h2>
+        let Tools = () => <p><ul><li>ECLIPSE NEON</li><li>Visual Studio Code</li><li>MySQL Database</li></ul></p>
+        let Certi = ({ certificate }) => <h2>{certificate}</h2>
+        let Certificates = () => <p><ul><li>RDBMS postgreSQL Training</li><li>OOPS Using Python</li><li>Cloud Computing Practitioner from AWS</li><li>Java Fundamentals at The ORACLE Academy</li></ul></p>
+        let Lang = ({ language }) => <h2>{language}</h2>
+        let Languages = () => <p><ul><li><b>English</b> with Limited working Proficiency</li><li><b>Tamil</b> with Full Professional Proficiency</li><li><b>Sourashtra</b> with Native or Bilingual Proficiency</li></ul></p>
+        let br = () => <br />
+        let End = () => <h4>Regards,</h4>
+        let Sign = () => <p>sarveshlal TE</p>
+
+        let Dom = () => (
+            <div>
+                <Resumetitle />
+                <Name names="SARVESHLAL TE" />
+                <Address email="sarveshlal99@gmail.com" phno="8939919166" addrs="12A,New Mahalipatty Road,Madurai" />
+                <Objective />
+                <hr />
+                <Education1 sslc="91% at Tagore Vidyalayam Mat. Hr.Sec.School,Madurai" />
+                <Education2 hsc="82% at CEOA Mat.Hr.Sec.School,Madurai" />
+                <Clge coll="68% at KLN College of Engineering,Sivagangai" />
+                <hr />
+                <Proj />
+                <Mini />
+                <Mainproj />
+                <Main />
+                <hr />
+                <Skillset />
+                <Skills />
+                <hr />
+                <Area intrst="Area Of interest" />
+                <Interest />
+                <Toools used="Tools Used" />
+                <Tools />
+                <hr />
+                <Certi certificate="Certificates" />
+                <Certificates />
+                <hr/>
+                <Lang language="Languages known" />
+                <Languages />
+                <End />
+                <Sign />
+            </div>
+        )
+        ReactDOM.render(<Dom />, root);
+    </script>
+</body>
+
+</html>
